@@ -4,8 +4,7 @@ cask 'datagraph' do
 
   url 'http://www.visualdatatools.com/DataGraph/DataGraph.dmg'
   name 'DataGraph'
-  homepage 'http://www.visualdatatools.com/DataGraph/'
-  license :commercial
+  homepage 'https://www.visualdatatools.com/DataGraph/'
 
   app 'DataGraph.app'
 end

@@ -10,8 +10,7 @@ cask 'macs-fan-control' do
   end
 
   name 'Macs Fan Control'
-  homepage 'http://www.crystalidea.com/macs-fan-control'
-  license :gratis
+  homepage 'https://www.crystalidea.com/macs-fan-control'
 
   app 'Macs Fan Control.app'
 

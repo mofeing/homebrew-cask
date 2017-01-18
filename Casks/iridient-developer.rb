@@ -1,11 +1,10 @@
 cask 'iridient-developer' do
-  version '3.1.0'
-  sha256 'bf2dfeaa4f1c16eaa159566a6191d174b69e7e46f5b47375f44528eb0687bc88'
+  version '3.1.3'
+  sha256 '7b28bfad2541e32b497a8816d489099189ec9b24dc9bfafa958ccd0cfbfb6208'
 
   url "http://www.iridientdigital.com/downloads/IridientDeveloper_#{version.no_dots}.dmg"
   name 'Iridient Developer'
   homepage 'http://www.iridientdigital.com/'
-  license :freemium
 
   app 'Iridient Developer.app'
 end

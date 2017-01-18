@@ -5,13 +5,14 @@ cask 'google-earth-pro' do
   url 'https://dl.google.com/earth/client/advanced/current/GoogleEarthProMac-Intel.dmg'
   name 'Google Earth Pro'
   homepage 'https://www.google.com/earth/'
-  license :gratis
 
   pkg 'Install Google Earth.pkg'
 
   uninstall pkgutil: 'com.Google.GoogleEarthPro'
 
   zap delete: [
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.google.googleearthpro.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.google.googleearthupdatehelper.sfl',
                 '~/Library/Application Support/Google Earth',
                 '~/Library/Caches/Google Earth',
                 '~/Library/Caches/com.Google.GoogleEarthPro',

@@ -5,9 +5,8 @@ cask 'home-inventory' do
   url 'https://binaryformations.com/homeinventory/HomeInventory.dmg'
   name 'Home Inventory'
   homepage 'https://binaryformations.com/products/home-inventory/'
-  license :commercial
 
-  depends_on macos: '>= 10.7'
+  depends_on macos: '>= :lion'
 
   app 'Home Inventory.app'
 

@@ -6,18 +6,17 @@ cask 'itsycal' do
     # s3.amazonaws.com/itsycal was verified as official when first introduced to the cask
     url "https://s3.amazonaws.com/itsycal/Itsycal-#{version}.zip"
   else
-    version '0.10.14'
-    sha256 '8b144c34794ab66c50f8be940385ef9e1fbfa700f85aa99ed6c60d1037e2fee1'
+    version '0.11.0'
+    sha256 '60ff34640b0b18e61ffe84af20d048ca20213712cfcfedae944119c346222634'
 
     # s3.amazonaws.com/itsycal was verified as official when first introduced to the cask
     url "https://s3.amazonaws.com/itsycal/Itsycal-#{version}.zip"
     appcast 'https://s3.amazonaws.com/itsycal/itsycal.xml',
-            checkpoint: 'ec27be0f98e5f0e0fc4b89f9fea467345eac7ab0eff97e664e88b69ac1e5f309'
+            checkpoint: '37721ee9e4205b27db362d645a0a96ba8946f5de8b080b3b8e483c6dd981fc1a'
   end
 
   name 'Itsycal'
   homepage 'https://www.mowglii.com/itsycal/'
-  license :gratis
 
   depends_on macos: '>= :mountain_lion'
 

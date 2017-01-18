@@ -19,7 +19,6 @@ cask 'shuttle' do
           checkpoint: 'c3dea2ed479b3ebba7c56ace6040901795f6dc6be92f9ffc30cc808d31723f17'
   name 'Shuttle'
   homepage 'https://fitztrev.github.io/shuttle/'
-  license :mit
 
   app 'Shuttle.app'
 
@@ -38,7 +37,6 @@ cask 'airstream' do
   url 'https://s3-us-west-2.amazonaws.com/airstream-clients/mac/airstream-mac.dmg'
   name 'AirStream'
   homepage 'http://airstream.io/download/'
-  license :gratis
 
   app 'AirStream.app'
 
@@ -60,7 +58,6 @@ cask 'airdisplay' do
           checkpoint: '938bdb9fbee793dce92818366cb2c19ba84c5b0cd6853fd893897d4a40689bc2'
   name 'Air Display'
   homepage 'https://avatron.com/apps/air-display/'
-  license :commercial
 
   pkg 'Air Display Installer.pkg'
 
@@ -104,7 +101,6 @@ cask 'my-new-cask' do
   url ''
   name ''
   homepage ''
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   app ''
 end
@@ -121,7 +117,6 @@ Fill in the following stanzas for your Cask:
 | `url`              | URL to the `.dmg`/`.zip`/`.tgz`/`.tbz2` file that contains the application.<br />A [comment](../cask_language_reference/stanzas/url.md#when-url-and-homepage-hostnames-differ-add-a-comment) should be added if the hostnames in the `url` and `homepage` stanzas differ. Block syntax should be used for URLs that change on every visit.<br />See [URL Stanza Details](../cask_language_reference/stanzas/url.md) for more information.
 | `name`             | the full and proper name defined by the vendor, and any useful alternate names (see [Name Stanza Details](../cask_language_reference/stanzas/name.md))
 | `homepage`         | application homepage; used for the `brew cask home` command
-| `license`          | a symbol identifying the license for the application. Valid category licenses include `:oss`, `:closed`, and `:unknown`. It is OK to leave as `:unknown`. (see [License Stanza Details](../cask_language_reference/stanzas/license.md))
 | `app`              | relative path to an `.app` bundle that should be moved into the `/Applications` folder on installation (see [App Stanza Details](../cask_language_reference/stanzas/app.md))
 
 Other commonly-used stanzas are:
@@ -201,7 +196,7 @@ We maintain separate Taps for different types of binaries. Our nomenclature is:
 
 ### Stable Versions
 
-Stable versions live in the main repository at [caskroom/homebrew-cask](https://github.com/caskroom/homebrew-cask). They should run on the latest release of macOS or the previous point release (in 2015, for example, that meant El Capitan and Yosemite).
+Stable versions live in the main repository at [caskroom/homebrew-cask](https://github.com/caskroom/homebrew-cask). They should run on the latest release of macOS or the previous point release (which are Sierra and El Capitan as of late 2016).
 
 ### But There Is No Stable Version!
 
@@ -213,7 +208,7 @@ When an App has a principal stable version, alternative versions should be submi
 
 ### Regional and Localized
 
-When an App exists in more than one language or has different regional editions, the US English one belongs in the main repo, and all the others in [caskroom/homebrew-versions](https://github.com/caskroom/homebrew-versions). When not already part of the name of the App, a [regional identifier](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) and a [language code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) are to be appended to the Cask’s token (both when available, or just the appropriate one when not).
+When an App exists in more than one language or has different regional editions, [the `language` stanza should be used to switch between languages or regions](../../doc/cask_language_reference/stanzas/language.md).
 
 ### Trial and Freemium Versions
 
@@ -293,12 +288,6 @@ $ git push "$github_user" my-new-cask
 ```
 
 If you are using [GitHub two-factor authentication](https://help.github.com/articles/about-two-factor-authentication/) and set your remote repository as HTTPS you will need to set up a personal access token and use that instead of your password. Further information [here](https://help.github.com/articles/https-cloning-errors/#provide-access-token-if-2fa-enabled).
-
-### Squashing
-
-If your pull request has multiple commits which revise the same lines of code, or if you make some changes after comments from one of the maintainers, it is better to [squash](https://davidwalsh.name/squash-commits-git) those commits together into one logical unit.
-
-But you don’t always have to squash — it is fine for a pull request to contain multiple commits when there is a logical reason for the separation.
 
 ### Filing a Pull Request on GitHub
 

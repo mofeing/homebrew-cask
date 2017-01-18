@@ -1,11 +1,10 @@
 cask 'serviio' do
-  version '1.6.1'
-  sha256 '3f5110543c1336eabce255f45aed28bd3b66b1752714e5826654df232b91e747'
+  version '1.8'
+  sha256 '96b71ae837bf83bbb19b3e7d94227e9a4f687e53d9e0b06ff8970cf096f98905'
 
   url "http://download.serviio.org/releases/serviio-#{version}-osx.tar.gz"
   name 'Serviio'
   homepage 'http://serviio.org/'
-  license :commercial
 
   pkg "Serviio-#{version}.pkg"
 end

@@ -1,11 +1,10 @@
 cask 'synergy' do
-  version '1.8.3,db9181b'
-  sha256 '9c20556b79691ab45d4cd96ed56e4f67f223fee5d7763e29001e705b44c21b97'
+  version '1.8.6,2ab21aa'
+  sha256 'f1ca271a56f0f42cc76dd3908c750d90cab7f51c329ac6fdebc04da7e64b5aef'
 
-  url "https://symless.com/files/packages/synergy-v#{version.before_comma}-stable-#{version.after_comma}-MacOSX1011-x86_64.dmg"
+  url "https://symless.com/files/packages/synergy-v#{version.before_comma}-stable-#{version.after_comma}-MacOSX-x86_64.dmg"
   name 'Synergy'
   homepage 'https://symless.com/synergy/'
-  license :commercial
 
   app 'Synergy.app'
 end

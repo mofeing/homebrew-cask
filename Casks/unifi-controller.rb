@@ -1,11 +1,10 @@
 cask 'unifi-controller' do
-  version '5.2.7'
-  sha256 'c736a643a25564aeb0a927b4a309b98810b997b091055ad733167fe55f06dc1d'
+  version '5.3.8'
+  sha256 '8b5f700a89386833b46c19ec412eefa621c743381bc3e228d84d2dbbeb5f4679'
 
   url "https://dl.ubnt.com/unifi/#{version}/UniFi.pkg"
   name 'UniFi Controller'
-  homepage 'https://www.ubnt.com/download/unifi'
-  license :commercial
+  homepage 'https://www.ubnt.com/download/unifi/'
 
   pkg 'UniFi.pkg'
 

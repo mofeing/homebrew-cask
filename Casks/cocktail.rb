@@ -1,19 +1,5 @@
 cask 'cocktail' do
-  if MacOS.version == :snow_leopard
-    version '5.1'
-    sha256 '630fc5236e95d5ec36c0de4b487f8ece76d8f02ecd00ec4b37124ddd0eed0f34'
-
-    url "https://www.maintain.se/downloads/sparkle/snowleopard/Cocktail_#{version}.zip"
-    appcast 'https://www.maintain.se/downloads/sparkle/snowleopard/snowleopard.xml',
-            checkpoint: '3fb0fdcd252f0d0898076a66c3ad3ef045590a82abc9c9789bc1d7fdd0dc21f0'
-  elsif MacOS.version == :lion
-    version '5.6'
-    sha256 '9fa8ff2ade1face0a1a36baf36cfa384535179b261716c18538b0102f281ee60'
-
-    url "https://www.maintain.se/downloads/sparkle/lion/Cocktail_#{version}.zip"
-    appcast 'https://www.maintain.se/downloads/sparkle/lion/lion.xml',
-            checkpoint: '81397ad4229e65572fb5386f445e7ecfdfc2161c51ce85747d2b4768b419984e'
-  elsif MacOS.version == :mountain_lion
+  if MacOS.version == :mountain_lion
     version '6.9'
     sha256 '309bac603a6ded301e9cc61b32bb522fc3a5208973cbd6c6f1a09d0e2c78d1e6'
 
@@ -35,24 +21,23 @@ cask 'cocktail' do
     appcast 'https://www.maintain.se/downloads/sparkle/yosemite/yosemite.xml',
             checkpoint: 'ffe079c9b71d0f356c8a4d45ecf4f5a50e1d284c972b0a1e5cf92234d7a1010e'
   elsif MacOS.version == :el_capitan
-    version '9.3.5'
-    sha256 'e34a9d9fd7ec22e00e78d5627b5f2ad5c8dc4a6c8050ec2413d3cbc46c1812f2'
+    version '9.4.2'
+    sha256 'cd03c89532f9b08d6b3fb0c86a08307212b7f70f564c50589825f66ccf11fff3'
 
     url "https://www.maintain.se/downloads/sparkle/elcapitan/Cocktail_#{version}.zip"
     appcast 'https://www.maintain.se/downloads/sparkle/elcapitan/elcapitan.xml',
-            checkpoint: 'a4d0e1719641e583255e63fc6d20aea2d910d77cdf9cb51ff5402d9a519109a1'
+            checkpoint: 'edc259968e1d28f3197019000270363a7c72ecb4c9bb163f83908382b0736995'
   else
-    version '10.0.0.10'
-    sha256 '1921342902de8d5412637592d61775137a92d473371b42785ffa72c13a6cbcd4'
+    version '10.1.4'
+    sha256 '8e77d08baa3b219cf188322256efbc52813bf7552204a7cd4e5ef10a284a43ef'
 
     url "https://www.maintain.se/downloads/sparkle/sierra/Cocktail_#{version}.zip"
     appcast 'https://www.maintain.se/downloads/sparkle/sierra/sierra.xml',
-            checkpoint: '2532966ebfd2b7845b9db39294d4e96cd372bb0745b21252537e74427a8852c2'
+            checkpoint: '95681e5ad695da14e4bbc02d8c40489984c042b4a4f3db4a576d238a7a9650f4'
   end
 
   name 'Cocktail'
   homepage 'https://www.maintain.se/cocktail/'
-  license :commercial
 
   app 'Cocktail.app'
 end

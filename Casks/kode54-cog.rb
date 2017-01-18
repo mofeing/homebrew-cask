@@ -1,11 +1,11 @@
 cask 'kode54-cog' do
-  version '0.08,4fdbf35'
-  sha256 '3239ba84b1dd65edbfa816695ffaa0af7ad6dbf6fdc3d77d9807ec2454095cbf'
+  version '0.08,89a2ab0'
+  sha256 '959efb00c83f3bf3809806d2fa0d5dfda53b28f1415651cf115fcbb676499a31'
 
-  url "https://www.kode54.net/cog/mercury_builds/Cog-#{version.after_comma}.zip"
+  # losno.co/cog was verified as official when first introduced to the cask
+  url "https://f.losno.co/cog/Cog-#{version.after_comma}.zip"
   name 'Cog'
   homepage 'https://kode54.net/cog/'
-  license :gpl
 
   app 'Cog.app'
 end

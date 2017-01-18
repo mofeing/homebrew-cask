@@ -1,11 +1,10 @@
 cask 'logitech-options' do
-  version '6.20.46'
-  sha256 '364c5db91353692f19b03a5904a873382f7cf1665e2c9b47736c038915b7043e'
+  version '6.35.142'
+  sha256 '501c0185149fc1b018f06ebafa574dc48560285570c2db866ead0d8e79eeef00'
 
   url "http://www.logitech.com/pub/techsupport/options/Options_#{version}.zip"
   name 'Logitech Options'
   homepage 'https://support.logitech.com/en_us/software/options'
-  license :closed
 
   depends_on macos: '>= :mavericks'
 

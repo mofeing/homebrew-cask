@@ -4,8 +4,7 @@ cask 'tsprint' do
 
   url 'http://www.terminalworks.com/downloads/tsprint/macosx/TSPrintClient.zip'
   name 'TSPrintClient'
-  homepage 'http://www.terminalworks.com'
-  license :gratis
+  homepage 'http://www.terminalworks.com/'
 
   pkg 'TSPrintClient.pkg'
 

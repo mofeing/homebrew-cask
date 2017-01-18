@@ -1,15 +1,28 @@
 cask 'docker' do
-  version '1.12.1.12133'
-  sha256 '09570e4bca991cb5fc3b04d8f64835c910942c5b4b35366ffb6f1af90ad0f336'
+  version '1.12.6.14937'
+  sha256 '06c37f809315855951f3d794c604c848abc1866662e5f3d85a0718b14fb57ec2'
 
   url "https://download.docker.com/mac/stable/#{version}/Docker.dmg"
   appcast 'https://download.docker.com/mac/stable/appcast.xml',
-          checkpoint: '70ba05cde55d1499e124b2a164ff0256294a2ec1793ea1d38462b3a80738b489'
+          checkpoint: '876fbc767ecc3c763e80c377e2b1cd9e6e0966b722a9f0f124a41fc16e95af4d'
   name 'Docker for Mac'
   homepage 'https://www.docker.com/products/docker'
-  license :gratis
 
   auto_updates true
 
   app 'Docker.app'
+
+  uninstall launchctl: 'com.docker.vmnetd'
+
+  zap delete: [
+                '/Library/PrivilegedHelperTools/com.docker.vmnetd',
+                '~/Library/Application Scripts/com.docker.helper',
+                '~/Library/Caches/KSCrashReports/Docker',
+                '~/Library/Caches/com.docker.docker',
+                '~/Library/Caches/com.plausiblelabs.crashreporter.data/com.docker.docker',
+                '~/Library/Containers/com.docker.docker',
+                '~/Library/Containers/com.docker.helper',
+                '~/Library/Group Containers/group.com.docker',
+                '~/Library/Preferences/com.docker.docker.plist',
+              ]
 end

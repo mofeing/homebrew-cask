@@ -1,11 +1,11 @@
 cask 'microsoft-office' do
-  version '15.26.0_160910'
-  sha256 '0936d7c66a9f99c259b2b8e13329b503b44290e56ee8d2c2512bce5a5f3bf32a'
+  version '15.29.16120900'
+  sha256 '3de84470f261eb84016ca080fc6764d167fc9ad6bf5bdfc227a6266f48c80a0b'
 
+  # officecdn.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/OfficeMac/ was verified as official when first introduced to the cask
   url "https://officecdn.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/OfficeMac/Microsoft_Office_2016_#{version}_Installer.pkg"
   name 'Microsoft Office 2016'
-  homepage 'https://www.microsoft.com/mac'
-  license :commercial
+  homepage 'https://products.office.com/mac/microsoft-office-for-mac'
 
   auto_updates true
 
@@ -24,27 +24,40 @@ cask 'microsoft-office' do
   zap       delete: [
                       '~/Library/Application Scripts/com.microsoft.Excel',
                       '~/Library/Application Scripts/com.microsoft.Office365ServiceV2',
-                      '~/Library/Application Scripts/com.microsoft.onenote.mac',
                       '~/Library/Application Scripts/com.microsoft.Outlook',
                       '~/Library/Application Scripts/com.microsoft.Powerpoint',
                       '~/Library/Application Scripts/com.microsoft.Word',
-                      '~/Library/Caches/com.microsoft.autoupdate.fba',
-                      '~/Library/Caches/com.microsoft.autoupdate2',
+                      '~/Library/Application Scripts/com.microsoft.errorreporting',
+                      '~/Library/Application Scripts/com.microsoft.onenote.mac',
+                      '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.excel.sfl',
+                      '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.powerpoint.sfl',
+                      '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.word.sfl',
                       '~/Library/Caches/Microsoft/uls/com.microsoft.autoupdate.fba',
                       '~/Library/Caches/Microsoft/uls/com.microsoft.autoupdate2',
+                      '~/Library/Caches/com.microsoft.autoupdate.fba',
+                      '~/Library/Caches/com.microsoft.autoupdate2',
                       '~/Library/Containers/com.microsoft.Excel',
                       '~/Library/Containers/com.microsoft.Office365ServiceV2',
-                      '~/Library/Containers/com.microsoft.onenote.mac',
                       '~/Library/Containers/com.microsoft.Outlook',
                       '~/Library/Containers/com.microsoft.Powerpoint',
                       '~/Library/Containers/com.microsoft.Word',
+                      '~/Library/Containers/com.microsoft.errorreporting',
+                      '~/Library/Containers/com.microsoft.onenote.mac',
                       '~/Library/Cookies/com.microsoft.autoupdate.fba.binarycookies',
                       '~/Library/Cookies/com.microsoft.autoupdate2.binarycookies',
-                      '~/Library/Group Containers/UBF8T346G9.ms/com.microsoft.autoupdate2',
-                      '~/Library/Group Containers/UBF8T346G9.Office/com.microsoft.officeprefs.plist',
+                      '~/Library/Group Containers/UBF8T346G9.Office',
+                      '~/Library/Group Containers/UBF8T346G9.OfficeOsfWebHost',
+                      '~/Library/Group Containers/UBF8T346G9.ms',
+                      '~/Library/Preferences/com.microsoft.Excel.plist',
+                      '~/Library/Preferences/com.microsoft.Powerpoint.plist',
+                      '~/Library/Preferences/com.microsoft.Word.plist',
                       '~/Library/Preferences/com.microsoft.autoupdate.fba.plist',
-                      '~/Library/Preferences/com.microsoft.Excel.LSSharedFileList.plist',
-                      '~/Library/Saved Application State/com.microsoft.onenote.mac.savedState',
-                      '~/Library/Saved Application State/com.microsoft.Outlook.savedState',
+                      '~/Library/Preferences/com.microsoft.autoupdate2.plist',
+                      '~/Library/Saved Application State/com.microsoft.autoupdate2.savedState',
+                      '~/Library/Saved Application State/com.microsoft.office.setupassistant.savedState',
+                    ],
+            rmdir:  [
+                      '~/Library/Caches/Microsoft/uls',
+                      '~/Library/Caches/Microsoft',
                     ]
 end

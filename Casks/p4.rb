@@ -1,18 +1,11 @@
 cask 'p4' do
-  version '2016.1.1429894'
+  version '2016.2.1468155'
+  sha256 '1e6165711902b65612637aa190e7ba09a8559f1e4e057e2b4587e7756c2bef59'
 
-  if Hardware::CPU.is_32_bit?
-    sha256 '7e68c05e9822d36f7d77609b2e127baab16ec9d72c74c8367b78333ec9d244bb'
-    url "http://filehost.perforce.com/perforce/r#{version.major_minor[2..-1]}/bin.macosx105x86/p4"
-  else
-    sha256 'bdd53babf08e487997a6a5bd9ee8da3241136f556d6f3a72dd0cadb04d2929d1'
-    url "http://filehost.perforce.com/perforce/r#{version.major_minor[2..-1]}/bin.macosx105x86_64/p4"
-  end
-
+  url "http://filehost.perforce.com/perforce/r#{version.major_minor[2..-1]}/bin.macosx105x86_64/p4"
   name 'Perforce Command-Line Client'
   name 'p4'
   homepage 'https://www.perforce.com/product/components/perforce-commandline-client'
-  license :gratis
 
   container type: :naked
 

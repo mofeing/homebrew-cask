@@ -1,29 +1,33 @@
 cask 'virtualbox' do
   if MacOS.version <= :lion
-    version '4.3.38-106717'
-    sha256 'f7229f9537dc2359e2f86b2d3623e5024f11d2ce9b075fe34a71b55995897463'
+    version '4.3.40-110317'
+    sha256 'eb70fc0f36844ced6dc7deeb30397866fbaffb4a8dfb6071b047e943cae6a312'
   elsif MacOS.version == :mountain_lion
-    version '5.0.26-108824'
-    sha256 'e8836a98adea9350917a41e754dfec4fe2df7c4a0224fd8beca72cbc5d778437'
+    version '5.0.32-112930'
+    sha256 'c693083f1df96a95d5faf794b22737df103973de3e0d89f04734d401962f81cf'
   else
-    version '5.1.6-110634'
-    sha256 '3fc6e2f1eb6d25ccf91194a102d2dd22b51a23df469257ea4d3893e1c5056e85'
+    version '5.1.14-112924'
+    sha256 'f12ed3b1f98c45074e52742d1006c418acd22d0d91e8a6fb6f7b3121c21ce998'
   end
 
   url "http://download.virtualbox.org/virtualbox/#{version.sub(%r{-.*}, '')}/VirtualBox-#{version}-OSX.dmg"
   appcast 'http://download.virtualbox.org/virtualbox/LATEST.TXT',
-          checkpoint: '68cffa589cae3c4d557ecb82a624655a2b6c85199c1425d26eefccfaa8548b2b'
+          checkpoint: '69ff967697383e82adfccadcc6e493391648adb709c427d4fef9ded116c08798'
   name 'Oracle VirtualBox'
-  homepage 'https://www.virtualbox.org'
-  license :gpl
+  homepage 'https://www.virtualbox.org/'
 
   pkg 'VirtualBox.pkg'
 
-  uninstall script:  { executable: 'VirtualBox_Uninstall.tool', args: %w[--unattended] },
+  uninstall script:  {
+                       executable: 'VirtualBox_Uninstall.tool',
+                       args:       %w[--unattended],
+                     },
             pkgutil: 'org.virtualbox.pkg.*'
 
   zap delete: [
                 '/Library/Application Support/VirtualBox',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.virtualbox.app.virtualbox.sfl',
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.virtualbox.app.virtualboxvm.sfl',
                 '~/Library/VirtualBox',
                 '~/Library/Preferences/org.virtualbox.app.VirtualBox.plist',
                 '~/Library/Preferences/org.virtualbox.app.VirtualBoxVM.plist',

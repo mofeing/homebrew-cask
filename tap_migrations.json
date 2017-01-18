@@ -1,5 +1,6 @@
 {
   "azure-cli": "homebrew/core",
+  "basex": "homebrew/core",
   "cocoapods": "homebrew/core",
   "consul": "homebrew/core",
   "consul-template": "homebrew/core",
@@ -13,6 +14,8 @@
   "ghc": "homebrew/core",
   "go": "homebrew/core",
   "graphviz": "homebrew/core",
+  "handbrakecli": "homebrew/core",
+  "helm": "homebrew/core",
   "hub": "homebrew/core",
   "hyper": "homebrew/core",
   "idris": "homebrew/core",
@@ -35,6 +38,7 @@
   "serf": "homebrew/core",
   "sickbeard": "homebrew/core",
   "srclib": "homebrew/core",
+  "sshfs": "homebrew/fuse",
   "sslmate": "homebrew/core",
   "swi-prolog": "homebrew/core",
   "syncthing": "homebrew/core",

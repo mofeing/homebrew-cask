@@ -1,12 +1,11 @@
 cask 'android-studio' do
-  version '2.2.0.12,145.3276617'
-  sha256 'ceead0271fc8cf9e53fd2235eb565028e63cdd04faace17dd430c90d8ee6f8ff'
+  version '2.2.3.0,145.3537739'
+  sha256 '0589c5e8099b91070af2178006455d5d3b134dcf6da5f6c33d95498a2f5f427c'
 
   # google.com/dl/android/studio was verified as official when first introduced to the cask
   url "https://dl.google.com/dl/android/studio/ide-zips/#{version.before_comma}/android-studio-ide-#{version.after_comma}-mac.zip"
   name 'Android Studio'
-  homepage 'https://developer.android.com/sdk/'
-  license :apache
+  homepage 'https://developer.android.com/studio/index.html'
 
   app 'Android Studio.app'
 
@@ -18,8 +17,4 @@ cask 'android-studio' do
                 "~/Library/Caches/AndroidStudio#{version.major_minor}",
               ],
       rmdir:  '~/AndroidStudioProjects'
-
-  caveats do
-    depends_on_java
-  end
 end

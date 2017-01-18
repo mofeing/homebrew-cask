@@ -5,7 +5,6 @@ cask 'netgeargenie' do
   url 'http://updates1.netgear.com/netgeargenie/mac/update/NETGEARGenieInstaller.dmg'
   name 'NETGEARGenie'
   homepage 'https://www.netgear.com/home/discover/apps/genie.aspx'
-  license :gratis
 
   pkg "NETGEAR_Genie_Installer_#{version}.pkg"
 
@@ -13,6 +12,7 @@ cask 'netgeargenie' do
             pkgutil: 'com.netgear.netgearGenie.NETGEARGenie.pkg'
 
   zap       delete: [
+                      '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.yourcompany.netgeargenie.sfl',
                       '~/Library/Application Support/NETGEARGenie',
                       '~/Library/Saved Application State/com.yourcompany.NETGEARGenie.savedState',
                     ]

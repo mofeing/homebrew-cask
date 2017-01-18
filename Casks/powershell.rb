@@ -1,14 +1,15 @@
 cask 'powershell' do
-  version '6.0.0-alpha.10'
-  sha256 '01a2b1ea27b3ee03ebd92e10d5106f0a6df912e1d5586feeb4a8b57faba11c00'
+  version '6.0.0-alpha.14'
+  sha256 '8fd7abc4ec1a2e4a28543b90a6ee60cd437d4b366b544c39b341a05276eb8ccf'
 
   # github.com/PowerShell/PowerShell was verified as official when first introduced to the cask
   url "https://github.com/PowerShell/PowerShell/releases/download/v#{version}/powershell-#{version}.pkg"
   appcast 'https://github.com/PowerShell/PowerShell/releases.atom',
-          checkpoint: '11d86f299b326db2ca34aa771a5576da5438c28d30dbcba22c85878bf57298de'
+          checkpoint: 'ef21df624051f199d998ba7658b38e23c6437944b129fe94680aac36b52cad92'
   name 'PowerShell'
   homepage 'https://msdn.microsoft.com/powershell'
-  license :oss
+
+  depends_on formula: 'openssl'
 
   pkg "powershell-#{version}.pkg"
 
@@ -25,4 +26,11 @@ cask 'powershell' do
                 '~/.local/share',
                 '~/.local',
               ]
+
+  caveats <<-EOS.undent
+    A OpenSSL-backed libcurl is required for custom handling of certificates.
+    This is rarely needed, but you can install it with
+      brew install curl --with-openssl
+    See https://github.com/PowerShell/PowerShell/issues/2211
+  EOS
 end

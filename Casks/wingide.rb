@@ -4,8 +4,7 @@ cask 'wingide' do
 
   url "https://wingware.com/pub/wingide/#{version.sub(%r{-\d+}, '')}/wingide-#{version}.dmg"
   name 'WingIDE'
-  homepage 'http://www.wingware.com/'
-  license :commercial
+  homepage 'https://www.wingware.com/'
 
   app 'WingIDE.app'
 end

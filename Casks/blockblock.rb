@@ -1,12 +1,13 @@
 cask 'blockblock' do
-  version '0.9.4'
-  sha256 'ae95c40ce4f33b4b46a62b925fb0bc0ef00c61a56c5c933c69316ff382ab397b'
+  version '0.9.5'
+  sha256 '1202120d4c2a64d53e8af575779c99c69635bb90eac8455cc4acdd7553a5fd58'
 
   # bitbucket.org/objective-see was verified as official when first introduced to the cask
   url "https://bitbucket.org/objective-see/deploy/downloads/BlockBlock_#{version}.zip"
+  appcast 'https://objective-see.com/products.json',
+          checkpoint: 'b2004932186e0eb176a9ac01fe499de292d502d7a17559e900822f9cdbfa74d6'
   name 'BlockBlock'
   homepage 'https://objective-see.com/products/blockblock.html'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
 
   installer manual: 'BlockBlock_Installer.app'
 

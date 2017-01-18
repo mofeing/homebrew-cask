@@ -1,12 +1,11 @@
 cask 'citrix-receiver' do
-  version '12.3.0'
-  sha256 'cd06f5fcb6c20f807318cf9b3eada887ac9e5e59e766f1310ad25b28caea3573'
+  version :latest
+  sha256 :no_check
 
   # downloadplugins.citrix.com.edgesuite.net was verified as official when first introduced to the cask
   url 'http://downloadplugins.citrix.com.edgesuite.net/Mac/CitrixReceiverWeb.dmg'
   name 'Citrix Receiver'
-  homepage 'https://www.citrix.com/receiver'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://www.citrix.com/products/receiver/'
 
   pkg 'Install Citrix Receiver.pkg'
 

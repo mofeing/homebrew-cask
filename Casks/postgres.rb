@@ -1,14 +1,20 @@
 cask 'postgres' do
-  version '9.5.4.2'
-  sha256 'df1404b5b3f220543feaf0d1036628536ea141fd07bb3d19b462e1ff0c1b234d'
+  version '2.0.1'
+  sha256 'bc8e40df78eab5fcc95eb749c79f03310d32a34d681b049507157d66872ce4ed'
 
   # github.com/PostgresApp/PostgresApp was verified as official when first introduced to the cask
-  url "https://github.com/PostgresApp/PostgresApp/releases/download/#{version}/Postgres-#{version}.zip"
+  url "https://github.com/PostgresApp/PostgresApp/releases/download/v#{version}/Postgres-#{version}.dmg"
   appcast 'https://github.com/PostgresApp/PostgresApp/releases.atom',
-          checkpoint: '92ab71a51b8bcda2fae5f713ced76c1b603758af08ffc38aa61b9403f3ea3c4e'
+          checkpoint: '658a38a0aa9191a6918c922042d8e05f3b37eb78f83df7e2082bbd09092644a0'
   name 'Postgres'
   homepage 'https://postgresapp.com/'
-  license :oss
+
+  auto_updates true
 
   app 'Postgres.app'
+
+  zap delete: [
+                '~/Library/Application Support/Postgres',
+                '~/Library/Preferences/com.postgresapp.Postgres2.plist',
+              ]
 end

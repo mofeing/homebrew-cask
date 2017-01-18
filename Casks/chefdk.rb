@@ -1,14 +1,18 @@
 cask 'chefdk' do
-  version '0.18.26-1'
-  sha256 '57097b056ff1403daef1034a98847adecd3cdbda47b9c6bee6885e7d2d5ea92f'
+  if MacOS.version == :mountain_lion
+    version '0.11.2-1'
+    sha256 '56899eab322cacac7f445a24d3159af34fccb5910642f4535eff4ee47321fe56'
+  elsif MacOS.version >= :mavericks
+    version '1.1.16-1'
+    sha256 '2c20e646b90e13e1dec5db22def0a752311eafcc7f441fa5f366002a7c2b65ae'
+  end
 
-  url "https://packages.chef.io/stable/mac_os_x/10.11/chefdk-#{version}.dmg"
-  appcast 'https://www.chef.io/chef/metadata-chefdk?p=mac_os_x&pv=10.11&m=x86_64&v=latest&prerelease=false',
-          checkpoint: '9f23e0a11081f36da4661069cc6b72632bc4c65a0bee5facd4ce4460df6c5cea'
+  url "https://packages.chef.io/stable/mac_os_x/#{MacOS.version}/chefdk-#{version}.dmg"
+  appcast "https://www.chef.io/chef/metadata-chefdk?p=mac_os_x&pv=#{MacOS.version}&m=x86_64&v=latest&prerelease=false",
+          checkpoint: '9b9421aef8f9beaf80d6f24c1ecb26113016673b160b711cc2a98100ce25c105'
   name 'Chef Development Kit'
   name 'ChefDK'
-  homepage 'https://downloads.chef.io/chef-dk/'
-  license :apache
+  homepage 'https://downloads.chef.io/chefdk/'
 
   pkg "chefdk-#{version}.pkg"
 
@@ -38,4 +42,6 @@ cask 'chefdk' do
                        '/usr/local/bin/pushy-service-manager',
                        '/usr/local/bin/rubocop',
                      ]
+
+  zap delete: '~/.chefdk/'
 end

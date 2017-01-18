@@ -1,22 +1,23 @@
 cask 'parallels-desktop' do
-  version '12.0.2-41353'
-  sha256 'a815c1137589ffec00699b33acef545043de9d532ef8475dfa069352d45bae11'
+  version '12.1.2-41525'
+  sha256 '80a05c985878f750595e7063b067868509e5ab2a2fe52cd614762acef9a175c0'
 
-  url "https://download.parallels.com/desktop/v#{version[%r{^\w+}]}/#{version}/ParallelsDesktop-#{version}.dmg"
+  url "https://download.parallels.com/desktop/v#{version.major}/#{version}/ParallelsDesktop-#{version}.dmg"
   name 'Parallels Desktop'
   homepage 'https://www.parallels.com/products/desktop/'
-  license :commercial
 
   app 'Parallels Desktop.app'
 
   postflight do
     # Unhide the application
-    system '/usr/bin/sudo', '-E', '--', 'chflags', 'nohidden', "#{appdir}/Parallels Desktop.app"
+    system_command '/usr/bin/chflags',
+                   args: ['nohidden', "#{appdir}/Parallels Desktop.app"],
+                   sudo: true
 
     # Run the initialization script
-    system '/usr/bin/sudo', '-E', '--',
-           "#{appdir}/Parallels Desktop.app/Contents/MacOS/inittool",
-           'init', '-b', "#{appdir}/Parallels Desktop.app"
+    system_command "#{appdir}/Parallels Desktop.app/Contents/MacOS/inittool",
+                   args: ['init', '-b', "#{appdir}/Parallels Desktop.app"],
+                   sudo: true
   end
 
   uninstall_preflight do

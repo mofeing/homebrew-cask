@@ -1,14 +1,10 @@
 cask 'dropdmg' do
-  version '3.4.2'
-  sha256 '540b0fd410f1cbd5c114af2acfaf8a7b032ff82cc9edf603af6b59b1a8b53ebf'
+  version '3.4.4'
+  sha256 '1d21d12b6314a119f8d40446479d4bb544f963a5ebf707d9198f63974c8a358f'
 
   url "https://c-command.com/downloads/DropDMG-#{version}.dmg"
   name 'DropDMG'
   homepage 'https://c-command.com/dropdmg/'
-  license :commercial
-
-  depends_on macos: '>= :snow_leopard'
-  depends_on arch: :intel
 
   app 'DropDMG.app'
 

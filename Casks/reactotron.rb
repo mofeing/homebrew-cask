@@ -1,13 +1,12 @@
 cask 'reactotron' do
-  version '1.1.1'
-  sha256 '505545c3b7efa7884f0f1cc2defebe6b74a08c0b3879964721f3502f26deeb6e'
+  version '1.6.0'
+  sha256 '0d25f248a12c16341def4c83ac3ce1fa67dd0ce93444bca41d7cb7920d7630e1'
 
   url "https://github.com/reactotron/reactotron/releases/download/v#{version}/Reactotron.app.zip"
   appcast 'https://github.com/reactotron/reactotron/releases.atom',
-          checkpoint: 'bd04ee26c6bd13918b2e18d28aae7b3521342f81fd3f148b2402406e70229af1'
+          checkpoint: '1cdbbdfc4b8e0f3cebac8fc98ddc1579a9586d3fa1fefb29073221e4b3cc5e11'
   name 'Reactotron'
   homepage 'https://github.com/reactotron/reactotron'
-  license :mit
 
   app 'Reactotron.app'
 

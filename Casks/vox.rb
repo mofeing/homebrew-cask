@@ -1,16 +1,15 @@
 cask 'vox' do
-  version '2810.6,1466704048'
-  sha256 '34dd198e7ad10ca543aaea644be450c66758e64f0034d377e9864c2e262d094e'
+  version '2.8.14'
+  sha256 'e7b63f52e4a2e977266a360b6a9f08a1d2f9e7e9638628d522f35d26a9548d73'
 
   # devmate.com/com.coppertino.Vox was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.coppertino.Vox/#{version.before_comma}/#{version.after_comma}/Vox-#{version.before_comma}.zip"
+  url 'https://dl.devmate.com/com.coppertino.Vox/Vox.dmg'
   appcast 'https://updates.devmate.com/com.coppertino.Vox.xml',
-          checkpoint: 'fffc16ccbe21909e29645f197a7416a0728d6969e466e026c73f860510bf6495'
+          checkpoint: '18dfeb8851c0f7bb5379b3eb6aff25246705c01bbfad9c3ae8f986a2fe19d00f'
   name 'VOX'
-  homepage 'https://coppertino.com/vox/mac'
-  license :freemium
+  homepage 'https://vox.rocks/mac-music-player'
 
-  app 'Vox.app'
+  app 'VOX.app'
 
   zap delete: [
                 '~/Library/Containers/com.coppertino.Vox',

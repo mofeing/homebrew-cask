@@ -1,13 +1,12 @@
 cask 'xamarin-mdk' do
-  version '4.6.0.245'
-  sha256 'c44cc7946c7d38b25351ae01786516a97e49970d72b7eccbffce8ed869e4862a'
+  version '4.6.2.16'
+  sha256 '466866fbf633e8853683543dd906b9773989bf5bb28366522d8309e3dde45e3e'
 
-  url "https://download.xamarin.com/MonoFrameworkMDK/Macx86/MonoFramework-MDK-#{version}.macos10.xamarin.universal.pkg"
+  url "https://dl.xamarin.com/MonoFrameworkMDK/Macx86/MonoFramework-MDK-#{version}.macos10.xamarin.universal.pkg"
   appcast 'https://static.xamarin.com/installer_assets/v3/Mac/Universal/InstallationManifest.xml',
-          checkpoint: 'b3b4ad91917a09091c1fee7f5aa71bab10c1c8cee5e5f2cbcdbb50e86ac31ac9'
+          checkpoint: '48d144620a3f8785b258c63ee2fb7e75a97b40ad3bfb947a74b914440df16422'
   name 'Xamarin Mono MDK'
-  homepage 'https://xamarin.com/platform'
-  license :unknown # TODO: change license and remove this comment; ':unknown' is a machine-generated placeholder
+  homepage 'https://www.xamarin.com/platform'
 
   pkg "MonoFramework-MDK-#{version}.macos10.xamarin.universal.pkg"
 

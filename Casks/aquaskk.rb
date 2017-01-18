@@ -1,13 +1,12 @@
 cask 'aquaskk' do
-  version '4.4.1'
-  sha256 '2f32925776f5ee57239f31df24f7edccf4bd9b6e8f997070ff4609b25e11dc6c'
+  version '4.4.5'
+  sha256 'a0d3c21abc914da4b81a93b7af4a4c8d26a3afbc49bb7af3b24376356d3d0a18'
 
   url "https://github.com/codefirst/aquaskk/releases/download/#{version}/AquaSKK-#{version}.dmg"
   appcast 'https://github.com/codefirst/aquaskk/releases.atom',
-          checkpoint: '8dce309c1b9a0c7ba2597b08cee0f5578a571ad37dfdfcb180cdcb55c0de6bff'
+          checkpoint: 'f28054fe31c55e5b93cdd2e2f3515534e5225c74c2fbb960a221ad3983247f46'
   name 'AquaSKK'
   homepage 'https://github.com/codefirst/aquaskk'
-  license :gpl
 
   pkg 'AquaSKK.pkg'
 

@@ -7,8 +7,8 @@ cask 'sublime-text' do
           checkpoint: '34717c4ad8bc4fd51b211effcc67fb84a04acff65126a77ba9789811659cb6d6'
   name 'Sublime Text'
   homepage 'https://www.sublimetext.com/3'
-  license :closed
 
+  auto_updates true
   conflicts_with cask: 'caskroom/versions/sublime-text-dev'
 
   app 'Sublime Text.app'
@@ -17,6 +17,7 @@ cask 'sublime-text' do
   uninstall quit: 'com.sublimetext.3'
 
   zap delete: [
+                '~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sublimetext.3.sfl',
                 '~/Library/Application Support/Sublime Text 3',
                 '~/Library/Caches/com.sublimetext.3',
                 '~/Library/Preferences/com.sublimetext.3.plist',

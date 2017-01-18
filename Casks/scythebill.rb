@@ -1,12 +1,11 @@
 cask 'scythebill' do
-  version '12.9.1'
-  sha256 '5a96cfaf72f5a574129856908502ecb06416d870fc0a5284ac665da5ed655649'
+  version '13.4.1'
+  sha256 '569b68ea9ba10216aab38320833fb3765c799f5b8b05da97ed67c4df21d12636'
 
   # amazonaws.com/downloads.scythebill.com was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/downloads.scythebill.com/scythebill-#{version}-mac-lion.zip"
+  url "https://s3.amazonaws.com/downloads.scythebill.com/Scythebill-#{version}.dmg"
   name 'Scythebill'
   homepage 'http://www.scythebill.com/'
-  license :apache
 
   app 'Scythebill.app'
 
